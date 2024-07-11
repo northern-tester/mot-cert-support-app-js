@@ -1,5 +1,5 @@
 # Timesheet Manager
-This provides the frontend for the Timesheet manager support app for the Automation in Testing Engineer learning journey.
+This provides the frontend for the Timesheet manager support app for the Automation in Testing Engineer learning journey. Please note this version was forked on Thursday 11th July 2024.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
