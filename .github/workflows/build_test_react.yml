@@ -23,7 +23,7 @@ jobs:
      - name: E2E checks
        run: |
          npm start &
-         sleep 30
+         npx wait-on http://127.0.01:3000
          npx wdio run ./wdio.conf.js
      - name: Build production artifacts
        run: |
