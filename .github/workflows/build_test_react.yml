@@ -21,10 +21,11 @@ jobs:
          npm ci
          npm test
      - name: Build app for testing
-       run: |
-         npm start
+       run: npm start
      - name: E2E checks
        run: |
+         npm start &
+         sleep 60
          npx wdio run ./wdio.conf.js
      - name: Build production artifacts
        run: |
