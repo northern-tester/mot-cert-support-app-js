@@ -20,10 +20,14 @@ jobs:
        run: |
          npm ci
          npm test
-     - name: E2E checks
+     - name: Start application
        run: |
          npm start &
-         sleep 30
+     - name: Wait for endpoint to be ready
+       run: |
+         run: node ./scripts/wait-for-api.js
+     - name: E2E checks
+       run: |
          npx wdio run ./wdio.conf.js
      - name: Build production artifacts
        run: |
