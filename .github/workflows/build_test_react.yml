@@ -25,7 +25,7 @@ jobs:
          npm start &
      - name: Wait for endpoint to be ready
        run: |
-         run: node ./scripts/wait-for-api.js
+         node ./scripts/wait-for-api.js
      - name: E2E checks
        run: |
          npx wdio run ./wdio.conf.js
