@@ -1,6 +1,6 @@
 const { expect, browser, $ } = require('@wdio/globals')
 
-describe('My Login application', () => {
+describe('Projects', () => {
 
     it('should show projects after creation', async () => {
         await browser.url('http://localhost:3000/#/login')
@@ -14,13 +14,13 @@ describe('My Login application', () => {
         await browser.url('http://localhost:3000/#/manage/projects')
 
         await $('#name').waitForExist()
-        await $('#title').setValue('Project 2')
+        await $('#name').setValue('Project 2')
         await $('.btn-primary').click()
 
         await browser.url('http://localhost:3000/#/projects')
 
-        const elements = await $$('.col-8 .list-group-item')
-        expect(elements.length).toBe(2)
+        const projectTableRows = await $('ul[data-testid="project-table"] tr')
+        expect(projectTableRows).toBeElementsArrayOfSize(2);
     });
 
 });

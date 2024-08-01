@@ -1,6 +1,6 @@
 const { expect, browser, $ } = require('@wdio/globals')
 
-describe('My login application', () => {
+describe('Login', () => {
 
     it('should login with valid credentials', async () => {
         
