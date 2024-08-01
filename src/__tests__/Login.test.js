@@ -6,7 +6,7 @@ import nock from 'nock';
 
 const authMock = nock('http://localhost')
     .post('/v1/auth/login', {
-        "email":"admin@password.com",
+        "email":"admin@test.com",
         "password":"password123"
     })
     .reply(200);
